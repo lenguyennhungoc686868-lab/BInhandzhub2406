@@ -3255,7 +3255,7 @@ local _, _ = pcall(function()
 end)
 spawn(function()
     pcall(function()
-        while task.wait(0.2) do
+        while task.wait(0.0001) do
             if getgenv().Module or _G.DefendVolcano or getgenv().AutoFarm then
                 enableNoclip()
                 disableCollisions()
@@ -5053,7 +5053,7 @@ v485:AddToggle({
     end
 })
 task.spawn(function()
-    while task.wait(0.2) do
+    while task.wait(0.0001) do
         if _G.AutoFarmMaterial and _G.SelectMaterial then
             pcall(function()
                 getConfigMaterial(_G.SelectMaterial)
@@ -6310,14 +6310,14 @@ if World3 then
             local l_Workspace_0 = game:GetService("Workspace")
             local l_Enemies_3 = l_Workspace_0.Enemies
             while getgenv().AutoGetCDK do
-                task.wait(0.2)
+                task.wait(0.0001)
                 pcall(function()
                     l_ReplicatedStorage_0.Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Good")
                     task.wait(0.2)
                     l_ReplicatedStorage_0.Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Evil")
-                    task.wait(0.2)
+                    task.wait(0.0001)
                     l_ReplicatedStorage_0.Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Boss")
-                    task.wait(0.2)
+                    task.wait(0.0001)
                     if not l_Enemies_3:FindFirstChild("Cursed Skeleton Boss") then
                         topos(CFrame.new(-12318.193, 601.951, -6538.662))
                         task.wait(0.5)
@@ -8136,7 +8136,7 @@ v492:AddToggle({
     end
 })
 spawn(function()
-    while task.wait(0.2) do
+    while task.wait(0.0001) do
         if getgenv().AutoStoreFruit then
             pcall(function()
                 local l_LocalPlayer_16 = game:GetService("Players").LocalPlayer
